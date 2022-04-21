@@ -7,7 +7,7 @@ let left = 0;
 let right = arr.length-1 
 
 
-function findTarget(array, target, left, right) {
+function binaryRecursive(array, target, left, right) {
     
     let pivot = Math.floor((right + left) / 2 );
     
@@ -27,16 +27,19 @@ function findTarget(array, target, left, right) {
 
 
     console.log(`spooky recursive function!`);
-    if (target < array[pivot]) return findTarget(array, target, left, pivot -1);
-    if (target > array[pivot]) return findTarget(array, target, pivot +1 , right);
+    if (target < array[pivot]) return binaryRecursive(array, target, left, pivot -1);
+    if (target > array[pivot]) return binaryRecursive(array, target, pivot +1 , right);
 
 }
 
-findTarget(arr, 12, left, right )
-findTarget(arr, 123425, left, right )
-findTarget(arr, 77, left, right )
-findTarget(arr, 35, left, right )
-findTarget(arr, 200, left, right )
-findTarget(arr, 11, left, right )
-findTarget(arr, 1, left, right )
-findTarget(arr, 1111111, left, right )
+binaryRecursive(arr, 12, left, right )
+binaryRecursive(arr, 123425, left, right )
+binaryRecursive(arr, 77, left, right )
+binaryRecursive(arr, 35, left, right )
+binaryRecursive(arr, 200, left, right )
+binaryRecursive(arr, 11, left, right )
+binaryRecursive(arr, 1, left, right )
+binaryRecursive(arr, 1111111, left, right )
+
+
+module.exports = { binaryRecursive };

@@ -1,0 +1,15 @@
+{
+  "name": "13-Ins-Pass-Tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fizz.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
